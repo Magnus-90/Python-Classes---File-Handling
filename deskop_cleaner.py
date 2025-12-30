@@ -1,4 +1,3 @@
-
 import os
 import shutil
 
@@ -24,9 +23,9 @@ def clean_folder(folder_path):
 
 if __name__ == "__main__":
     print("Desktop Cleaner Script")
-    folder_path = 'C:\\Users\\mha\\Downloads\\Python-Cleaning-Ordner'
+    folder_path = 'C:\\Users\\mha\\Downloads\\Python-Cleaning-Ordne' # <--- Hier Pfad ändern
     if os.path.isdir(folder_path):
         clean_folder(folder_path)
         print("Reinigung vollständig.")
     else:
-        print("Falscher Pfad. Bitte überprüfe den Pfad.")
+        print("Pfad existiert nicht. Bitte überprüfe den Pfad.")
