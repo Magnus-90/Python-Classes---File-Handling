@@ -56,7 +56,7 @@ def ausgabe_erfassen():
         budget_description = input("Geben sie einen Namen für die Transaktion ein: ")
     while True:
         try:
-            budget_ausgaben = int(input("Geben sie ihre Ausgabe ein: "))
+            budget_ausgaben = float(input("Geben sie ihre Ausgabe ein: "))
             if budget_ausgaben <= 0:
                 print("Ausgabe muss positiv sein!")
                 continue
