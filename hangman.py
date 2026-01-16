@@ -17,8 +17,7 @@ def maingame():
     wordlength = len(word)
     max_attempts = len(word) + 2
     print("Das Spiel beginnt")
-    print("-----------------")
-    print(word.capitalize())
+    # print(word.capitalize())
     print(" ".join(word_display))
     while wordlength_userinput < wordlength and inputs < max_attempts:
         userinput = input("Geben sie einen Buchstaben ein: ").lower()
@@ -42,7 +41,7 @@ def maingame():
         print("")
 
     if wordlength_userinput == wordlength:
-        print("🎉 Gewonnen!")
+        print("Gewonnen!")
     else:
-        print("❌ Verloren! Das Wort war:", word)
+        print("Verloren! Das Wort war:", word)
 startmenu()
