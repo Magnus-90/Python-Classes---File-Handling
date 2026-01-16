@@ -1,6 +1,6 @@
 import random
 
-random_words_list = ["python", "java", "javascript", "typescript"]
+random_words_list = ["python", "java", "javascript", "typescript", "html", "swift", "ruby"]
 
 def startmenu():
     print("Hangman Spiel")
