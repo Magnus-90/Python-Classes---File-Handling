@@ -4,7 +4,7 @@
 - Budget Verlauf
 ## Desktop Cleaner
 - Script um einen Ordner aufzuräumen
-- Ordner muss angepasst werden! (siehe hier ->https://github.com/Magnus-90/Python-Classes---File-Handling/blob/bf612e74a325a270fab73bfa2d91d7f2d3edbf41/deskop_cleaner.py#L26)
+- Ordner muss angepasst werden! (siehe hier -> https://github.com/Magnus-90/Python-Classes---File-Handling/blob/f3da059a42965aa0fbaec3f4e3d3bcac7286032a/deskop_cleaner.py#L26
 ## Hangman Game
 - Hangman Game mit Visualisierung
 ## Hangman with Random Package
