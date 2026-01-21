@@ -1,14 +1,6 @@
 import random
 import sys
-
-random_words_list = [
-    "python", "java", "javascript", "html", "css",
-    "java", "swift", "kotlin", "ruby", "php",
-    "typescript", "golang",
-    "bash", "powershell",
-    "sql"
-]
-
+import zufallsworte as zufall
 
 def startmenu():
     print("Hangman Spiel")
@@ -96,7 +88,9 @@ def maingame():
     guessed_letters = []
     wordlength_userinput = 0
     inputs = 0
-    word = random.choice(random_words_list) # Zufällige Auswahl
+    word = zufall.anzahl_buchstaben(6, 1)[0] # Erste Zahl für Anzahl Buchstaben und Zweite Zahl für Anzahl Wörter
+    word = word[0].lower() + word[1:]
+    # word = random.choice(random_word) # Zufällige Auswahl
     word_display = ["_" for _ in word]
     wordlength = len(word)
     max_attempts = 8
