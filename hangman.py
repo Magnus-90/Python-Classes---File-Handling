@@ -9,7 +9,6 @@ random_words_list = [
     "sql"
 ]
 
-
 def startmenu():
     print("Hangman Spiel")
     print("---------------")
