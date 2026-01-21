@@ -122,7 +122,7 @@ def maingame():
     if wordlength_userinput == wordlength:
         print("Gewonnen!")
     else:
-        print("Verloren! Das Wort war:", word)
+        print("\033[31mVerloren!\033[0m Das Wort war:", word)
     
     userinput_play_again = input("Möchten sie weiter spielen? (y/n): ").lower()
     while userinput_play_again != "y" and userinput_play_again != "n":

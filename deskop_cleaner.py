@@ -23,7 +23,7 @@ def clean_folder(folder_path):
 
 if __name__ == "__main__":
     print("Desktop Cleaner Script")
-    folder_path = 'C:\\Users\\mha\\Downloads\\Python-Cleaning-Ordne' # <--- Hier Pfad ändern
+    folder_path = '' # <--- Hier Pfad ändern
     if os.path.isdir(folder_path):
         clean_folder(folder_path)
         print("Reinigung vollständig.")
