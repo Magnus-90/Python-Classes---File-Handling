@@ -83,17 +83,28 @@ Hangman_Stages = [
 def checkstage(inputs):
     print(Hangman_Stages[inputs])
 
+def replaceumlaute(word):
+    replacements = {
+        "ä": "ae", # umlaut: ersatz
+        "ö": "oe",
+        "ü": "ue",
+        "ß": "ss"
+    }
+    for umlaut, ersatz in replacements.items():
+        word = word.replace(umlaut, ersatz)
+    return word
+
 def maingame():
     guessed_letters = []
     wordlength_userinput = 0
     inputs = 0
-    word = zufall.anzahl_buchstaben(3, 1)[0] # Erste Zahl für Anzahl Buchstaben und Zweite Zahl für Anzahl Wörter
+    word = zufall.anzahl_buchstaben(5, 1)[0] # Erste Zahl für Anzahl Buchstaben und Zweite Zahl für Anzahl Wörter
+    word = replaceumlaute(word)
     word = word[0].lower() + word[1:]
-    # word = random.choice(random_word) # Zufällige Auswahl
     word_display = ["_" for _ in word]
     wordlength = len(word)
     max_attempts = 8
-    print("Das Spiel beginnt")
+    print("\033[32mDas Spiel beginnt\033[0m")
     print(" ".join(word_display))
     while wordlength_userinput < wordlength and inputs < max_attempts:
         userinput = input("Geben sie einen Buchstaben ein: ").lower()
@@ -113,14 +124,14 @@ def maingame():
                     print("\033[42mBuchstabe ist im Wort\033[0m")
         else:
             inputs = inputs + 1
-            print("Buchstabe war nicht im Wort")
+            print("\033[31mBuchstabe war nicht im Wort\033[0m")
         print(" ".join(word_display))
-        print(f"Fehlversuche: {inputs} von {max_attempts}")
+        print(f"\033[31mFehlversuche: {inputs} von {max_attempts}\033[m")
         print("")
         checkstage(inputs)
 
     if wordlength_userinput == wordlength:
-        print("Gewonnen!")
+        print("\033[32mGewonnen!\033[0m")
     else:
         print("\033[31mVerloren!\033[0m Das Wort war:", word)
     
